@@ -1,4 +1,5 @@
-name: Docker Build and Push
+name: Docker Build and Push the image to ghrc.io
+
 
 on:
   workflow_run:
@@ -24,6 +25,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ../../../
+          context: ../../
+          file: ../../Dockerfile
           push: true
           tags: ghcr.io/andreicozari/welcome-to-docker:latest
