@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodejs-container
-        image: docker/welcome-to-docker:latest  # Replace with your image
+        image: ghcr.io/andreicozari/welcome-to-docker:latest  # Replace with your image
         ports:
         - containerPort: 3000  # The port your app listens on
         resources:
